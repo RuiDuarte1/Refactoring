@@ -42,4 +42,9 @@ public class Movie {
     public int getFrequentRenterPoints(int daysRented) {
         return _price.getFrequentRenterPoints(daysRented);
     }
+
+
+    public String getTitle() {
+        return null;
+    }
 }
