@@ -1,9 +1,9 @@
 package refactoring;
 
 public class Movie {
-    public static final int  CHILDRENS = 2;
-    public static final int  REGULAR = 0;
-    public static final int  NEW_RELEASE = 1;
+    public static final int CHILDRENS = 2;
+    public static final int REGULAR = 0;
+    public static final int NEW_RELEASE = 1;
 
     private String _title;
 
@@ -34,13 +34,12 @@ public class Movie {
                 throw new IllegalArgumentException("Incorrect Price Code");
         }
     }
-    public double getCharge(int daysRented){
-       return _price.getCharge(daysRented);
+
+    public double getCharge(int daysRented) {
+        return _price.getCharge(daysRented);
     }
 
-    public int getFrequentRenterPoints(int daysRented){
-        if (_priceCode == NEW_RELEASE && daysRented > 1)
-            return 2;
-        return 1;
+    public int getFrequentRenterPoints(int daysRented) {
+        return _price.getFrequentRenterPoints(daysRented);
     }
 }
